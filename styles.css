@@ -76,10 +76,12 @@ ul li {
 
 .header {
 	display: flex;
+	position: relative;
+	z-index: 1;
 	flex-direction: column;
 	grid-column: 2 / 3;
 	height: 170px;
-	box-shadow: 5px 10px 20px 5px rgba(0, 0, 0, 0.5);
+	box-shadow: 0px 10px 20px 5px rgba(0, 0, 0, 0.3);
 	padding: 15px 30px;
 	gap: 30px;
 }
@@ -147,4 +149,143 @@ ul li {
 	border-radius: 16px;
 	border: none;
 	width: 100px;
+}
+
+button:hover {
+	background-color: #0e9594;
+}
+
+.main {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	background-color: lightgrey;
+	padding: 30px 40px;
+	gap: 20px;
+}
+
+.main article {
+	grid-column: 1 / 2;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.announcements {
+	grid-column: 2 / 3;
+}
+
+.trending {
+	grid-column: 2 / 3;
+}
+
+.cards-container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 1fr);
+	gap: 30px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 6px;
+	padding: 30px 20px;
+	border-left: 6px solid #f2542d;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 20px;
+	box-shadow: 0px 10px 5px 4px rgba(0, 0, 0, 0.3);
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.card-content > p {
+	font-size: 0.8rem;
+	width: 60ch;
+	color: grey;
+}
+
+.card-footer {
+	display: flex;
+	gap: 20px;
+	justify-content: end;
+}
+
+.announcements {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.announcements-container {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 6px;
+	padding: 30px 30px;
+}
+
+h4 {
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.announcements-part {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.announcements-part > p {
+	font-size: 0.75rem;
+	color: grey;
+}
+
+hr {
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: none;
+	border-top: 2px solid #0e9594;
+}
+
+.asides {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+.trending {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.trending-container {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	border-radius: 6px;
+	padding: 30px 30px;
+	gap: 30px;
+}
+
+.trending-card {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+}
+
+.trending-text {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.trending-text p:nth-child(2) {
+	color: gray;
+	font-size: 0.8rem;
 }
